@@ -1,0 +1,11 @@
+Aug 27 15:13:44 agiraude kernel: [ 4919.207710] usb 1-4: new high-speed USB device number 24 using xhci_hcd
+Aug 27 15:13:44 agiraude kernel: [ 4919.334293] usb 1-4: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+Aug 27 15:13:44 agiraude kernel: [ 4919.334871] usb 1-4: New USB device strings: Mfr=1, Product=4, SerialNumber=11
+Aug 27 15:13:44 agiraude kernel: [ 4919.335374] usb 1-4: Product: QEMU USB Keyboard
+Aug 27 15:13:44 agiraude kernel: [ 4919.335895] usb 1-4: Manufacturer: QEMU
+Aug 27 15:13:44 agiraude kernel: [ 4919.336388] usb 1-4: SerialNumber: 68284-0000:00:02.1:00.0-4
+Aug 27 15:13:44 agiraude kernel: [ 4919.339827] input: QEMU QEMU USB Keyboard as /devices/pci0000:00/0000:00:02.1/0000:02:00.0/usb1/1-4/1-4:1.0/0003:0627:0001.0018/input/input27
+Aug 27 15:13:44 agiraude kernel: [ 4919.392581] hid-generic 0003:0627:0001.0018: input,hidraw1: USB HID v1.11 Keyboard [QEMU QEMU USB Keyboard] on usb-0000:02:00.0-4/input0
+Aug 27 15:13:44 agiraude kernel: [ 4919.397591] [kbd] Hello world !
+Aug 27 15:13:49 agiraude kernel: [ 4924.377349] usb 1-4: USB disconnect, device number 24
+Aug 27 15:13:49 agiraude kernel: [ 4924.440919] [kbd] Cleaning up module.
