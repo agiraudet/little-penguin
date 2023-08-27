@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0627", ATTRS{idProduct}=="0001", ENV{DEVTYPE}=="usb_device", RUN+="/usr/sbin/insmod /home/ag/Dev/little-penguin/ex04/kbd.ko"
+ACTION=="remove", ENV{ID_MODEL}=="QEMU_USB_Keyboard", RUN+="/usr/sbin/rmmod kbd.ko"
