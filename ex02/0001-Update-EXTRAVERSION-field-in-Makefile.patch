@@ -1,0 +1,26 @@
+From 469da410cb62bbbc1bfe0cd939262f63cf770a19 Mon Sep 17 00:00:00 2001
+From: agiraude <agiraude@student.42.fr>
+Date: Fri, 25 Aug 2023 16:32:16 +0200
+Subject: [PATCH] Update EXTRAVERSION field in Makefile
+
+Signed-off-by: agiraude <agiraude@student.42.fr>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 4739c21a63e2..c16589ae0e1c 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 6
+ PATCHLEVEL = 5
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc7
++EXTRAVERSION = -rc7-thor_kernel
+ NAME = Hurr durr I'ma ninja sloth
+ 
+ # *DOCUMENTATION*
+-- 
+2.39.2
+
