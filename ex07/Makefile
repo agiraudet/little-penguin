@@ -1,5 +1,5 @@
 ifneq ($(KERNELRELEASE),)
-	obj-m := fortytwo.o
+	obj-m := ft_debug.o
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD := $(shell pwd)

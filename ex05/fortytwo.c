@@ -21,7 +21,7 @@ static struct file_operations ft_dev_ops = {
 
 struct miscdevice ft_dev = {
 	.minor = MISC_DYNAMIC_MINOR,
-	.name = "fourtytwo",
+	.name = "fortytwo",
 	.fops = &ft_dev_ops
 };
 
@@ -61,13 +61,13 @@ static ssize_t ft_write(struct file *file_pointer, const char __user *buffer, si
 
 static int ft_init(void)
 {
-	printk(KERN_ALERT "Registering fourtytwo\n");
+	printk(KERN_ALERT "Registering fortytwo\n");
 	return misc_register(&ft_dev);
 }
 
 static void ft_exit(void)
 {
-	printk(KERN_ALERT "De-registering fourtytwo\n");
+	printk(KERN_ALERT "De-registering fortytwo\n");
 	return misc_deregister(&ft_dev);
 }
 
