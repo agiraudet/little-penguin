@@ -1,6 +1,7 @@
 static struct mutex foo_lock;
 
 static char *foo_page = 0;
+static size_t foo_size = 0;
 
 static ssize_t f_foo_write(struct file *file_pointer, const char __user *buffer,
 		size_t count, loff_t *ppos)
@@ -12,6 +13,7 @@ static ssize_t f_foo_write(struct file *file_pointer, const char __user *buffer,
 		mutex_unlock(&foo_lock);
 		return -EFAULT;
 	}
+	foo_size = count;
 	*ppos += count;
 	mutex_unlock(&foo_lock);
 	return count;
@@ -21,9 +23,11 @@ static ssize_t f_foo_read(struct file *file_pointer, char __user *buffer,
 		size_t count, loff_t *ppos)
 {
 	mutex_lock(&foo_lock);
-	size_t remaining_bytes = PAGE_SIZE - *ppos;
-	if (remaining_bytes <= 0)
+	size_t remaining_bytes = foo_size - *ppos;
+	if (remaining_bytes <= 0) {
+		mutex_unlock(&foo_lock);
 		return 0;
+	}
 	size_t rb = remaining_bytes < count ? remaining_bytes : count;
 	if (copy_to_user(buffer, foo_page + *ppos, rb)) {
 		mutex_unlock(&foo_lock);
