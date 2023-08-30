@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]; then
 	exit 1
 fi
 
-module_name="fourtytwo"
+module_name="fortytwo"
 
 if ! lsmod | grep -wq "$module_name"; then
 	echo "Loading module..."
