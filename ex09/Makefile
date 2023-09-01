@@ -1,5 +1,5 @@
 ifneq ($(KERNELRELEASE),)
-	obj-m := fore.o
+	obj-m := mymounts.o
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD := $(shell pwd)
